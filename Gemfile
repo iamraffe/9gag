@@ -18,6 +18,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'guard' # NOTE: this is necessary in newer versions
   gem 'minitest-reporters'
   gem 'mini_backtrace'
   gem 'guard-minitest'

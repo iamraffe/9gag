@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'static_pages/home'
+  root 'static_pages#home'
 
   get 'static_pages/help'
 
-  root 'application#hello'
+  get 'static_pages/about'
 
   get "goodbye" => 'application#goodbye'
   # The priority is based upon order of creation: first created -> highest priority.
