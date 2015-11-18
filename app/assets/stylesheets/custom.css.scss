@@ -1,5 +1,7 @@
 @import "bootstrap-sprockets";
+@import "bootswatch/yeti/variables";
 @import "bootstrap";
+@import "bootswatch/yeti/bootswatch";
 
 /* mixins, variables, etc. */
 
@@ -63,7 +65,7 @@ p {
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 5.5px;
   font-weight: bold;
   &:hover {
     color: white;
