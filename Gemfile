@@ -8,12 +8,13 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'sdoc'
+gem 'spring'
 
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
   gem 'web-console'
-  gem 'spring'
+  # gem 'spring'
 end
 
 group :test do
