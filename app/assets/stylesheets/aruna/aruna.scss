@@ -3,8 +3,11 @@
 $h1-color : #4e4e4e;
 $widget-title : #afafaf;
 $hr-color: #ececec;
-$light-purple : #7f46dd;
-$dark-purple : #7541cc;
+$light-purple : #1BAEA6;
+$dark-purple : #158782;
+$purple: #19A19A;
+$very-dark-purple: #0F615D;
+$very-light-purple: #25EDE4;
 $header-height: 80px;
 $buttons-bar-height: 55px;
 
@@ -108,7 +111,7 @@ header {
     .user-box {
       width: 160px;
       height: $header-height;
-      background-color: #723fc6;
+      background-color: $purple;
       float: left;
       text-align: center;
       position: relative;
@@ -224,7 +227,7 @@ header {
     float: left;
     text-align: center;
     padding: 25px 30px;
-    border-right: solid 1px #7440c9;
+    // border-right: solid 1px #7440c9;
     img {
       width: 100%;
       height: auto;
@@ -484,7 +487,7 @@ header {
     height: $header-height;
     text-align: center;
     padding: 0 30px;
-    border-right: solid 1px #7440c9;
+    // border-right: solid 1px #7440c9;
     a {
       width: 60px;
       display: table-cell;
@@ -884,7 +887,7 @@ aside {
     float: right;
     width: 100%;
     height: 55px;
-    background-color: #7f46dd;
+    background-color: $light-purple;
     // @include transition("width 0.4s ease-in-out");
     &.closed {
       width: $buttons-bar-height;
@@ -901,7 +904,7 @@ aside {
     .buttons {
       float: left;
       height: $buttons-bar-height;
-      background-color: #6b3bb9;
+      background-color: $very-dark-purple;
       a {
         width: $buttons-bar-height;
         height: $buttons-bar-height;
@@ -917,12 +920,12 @@ aside {
           background-position: top center;
         }
         &:hover {
-          background-color: #6135a8;
+          background-color: darken($very-dark-purple, 5%);
         }
       }
       .count {
         height: $buttons-bar-height;
-        background-color: #7541cc;
+        background-color: $dark-purple;
         float: left;
         padding: 0 40px;
         color: white;
@@ -944,7 +947,7 @@ aside {
         background-color: transparent;
         // @include transition("background-color 0.4s ease-in-out");
         &:hover {
-          background-color: #703dc2;
+          background-color: darken($light-purple, 5%);
         }
         &.facebook {
           background-position: 0px 0px;
@@ -973,7 +976,7 @@ aside {
         background-position: bottom center;
       }
       &:hover {
-        background-color: #703dc2;
+        background-color: darken($light-purple, 5%);
       }
     }
   }
@@ -1459,7 +1462,7 @@ footer {
   font-weight: bold;
   &.bottom {
     .tooltip-arrow {
-      border-bottom-color: #7f46dd;
+      border-bottom-color: $light-purple;
     }
   }
   &.in {
@@ -1467,7 +1470,7 @@ footer {
   }
 }
 .tooltip-inner {
-  background-color: #7f46dd;
+  background-color: $light-purple;
   padding: 7px 20px;
 }
 .profile-wrap {
@@ -1987,12 +1990,12 @@ footer {
         color: white;
         font-size: 14px;
         @include font-Dosis;
-        background-color: #7f46dd;
+        background-color: $light-purple;
         text-transform: uppercase;
         font-weight: bold;
         text-decoration: none;
         &.alternate-btn {
-          background-color: #7541cc;
+          background-color: $dark-purple;
         }
       }
     }
@@ -2301,7 +2304,7 @@ body.modal-open {
   .half {
     width: 50%;
     float: left;
-    border-left: solid 1px #7541cc;
+    border-left: solid 1px $dark-purple;
     text-align: center;
     &:first-child {
       border-left: none;
@@ -2781,7 +2784,7 @@ body.modal-open {
           margin-top: -30px;
           margin-left: -30px;
           position: absolute;
-          background-color: #7f46dd;
+          background-color: $light-purple;
           text-align: center;
           color: white;
           // @include transition("all .4s ease-in-out");
@@ -2798,7 +2801,7 @@ body.modal-open {
           .button-text {
             width: 100%;
             color: white;
-            background-color: #7541cc;
+            background-color: $dark-purple;
             @include font-Dosis;
             font-size: 10px;
             font-weight: bold;
@@ -2851,7 +2854,7 @@ body.modal-open {
           margin-top: -15px;
           margin-left: -15px;
           position: absolute;
-          background-color: #7f46dd;
+          background-color: $light-purple;
           text-align: center;
           color: white;
           // @include transition("all .4s ease-in-out");
@@ -2868,7 +2871,7 @@ body.modal-open {
           .button-text {
             width: 100%;
             color: white;
-            background-color: #7541cc;
+            background-color: $dark-purple;
             @include font-Dosis;
             font-size: 8px;
             font-weight: bold;
@@ -3011,8 +3014,8 @@ img {
   height: auto;
 }
 .custom-button.btn-primary {
-  background: #7f46dd;
-  border-color: #7f46dd;
+  background: $light-purple;
+  border-color: $light-purple;
   -webkit-border-radius: 2px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 2px;
@@ -3090,7 +3093,7 @@ header .right-container {
 header .right-container .user-box {
   width: 160px;
   height: 80px;
-  background-color: #723fc6;
+  background-color: $purple;
   float: left;
   text-align: center;
   position: relative;
@@ -3208,7 +3211,7 @@ header .navbar {
   background-clip: padding-box;
   margin: 0;
   border: none;
-  background-color: #7f46dd;
+  background-color: $light-purple;
 }
 header .navbar-default .navbar-brand {
   height: 80px;
@@ -3216,7 +3219,7 @@ header .navbar-default .navbar-brand {
   float: left;
   text-align: center;
   padding: 25px 30px;
-  border-right: solid 1px #7440c9;
+  // border-right: solid 1px #7440c9;
 }
 header .navbar-default .navbar-brand img {
   width: 100%;
@@ -3227,12 +3230,12 @@ header .navbar-default .navbar-nav > .active > a,
 header .navbar-default .navbar-nav > .active > a:hover,
 header .navbar-default .navbar-nav > .active > a:focus {
   color: white;
-  background: #7541cc;
+  background: $dark-purple;
 }
 header .navbar-default .navbar-nav > li > a:hover,
 header .navbar-default .navbar-nav > li > a:focus {
   color: white;
-  background: #7541cc;
+  background: $dark-purple;
 }
 header .navbar-default .navbar-nav > li.dropdown > a:hover {
   padding: 30px 20px 30px 25px;
@@ -3241,7 +3244,7 @@ header .navbar-default .navbar-nav > .open > a,
 header .navbar-default .navbar-nav > .open > a:hover,
 header .navbar-default .navbar-nav > .open > a:focus {
   color: white;
-  background: #7541cc;
+  background: $dark-purple;
   padding: 30px 20px 30px 25px;
 }
 header .navbar-default .navbar-nav > .dropdown > a .caret {
@@ -3384,7 +3387,7 @@ header .dropdown-menu > li > a:focus {
 }
 .top-ten {
   width: 95px;
-  background-color: #7541cc;
+  background-color: $dark-purple;
   height: 80px;
   float: left;
   position: relative;
@@ -3466,7 +3469,7 @@ header .dropdown-menu > li > a:focus {
   opacity: 0.2;
 }
 .header-wrap {
-  background-color: #7f46dd;
+  background-color: $light-purple;
   width: 100%;
   float: left;
   height: 80px;
@@ -3477,7 +3480,7 @@ header .dropdown-menu > li > a:focus {
   height: 80px;
   text-align: center;
   padding: 0 30px;
-  border-right: solid 1px #7440c9;
+  // border-right: solid 1px #7440c9;
 }
 .header-wrap .logo a {
   width: 60px;
@@ -3513,7 +3516,7 @@ header .dropdown-menu > li > a:focus {
   position: relative;
 }
 .main-nav > ul > li:hover {
-  background-color: #7541cc;
+  background-color: $dark-purple;
 }
 .main-nav > ul > li:hover > ul {
   height: auto;
@@ -3901,7 +3904,7 @@ aside .widget:first-child {
   float: right;
   width: 100%;
   height: 55px;
-  background-color: #7f46dd;
+  background-color: $light-purple;
   -webkit-transition: width 0.4s ease-in-out;
   -moz-transition: width 0.4s ease-in-out;
   -o-transition: width 0.4s ease-in-out;
@@ -3923,7 +3926,7 @@ aside .widget:first-child {
 .main-post .buttons-bar .buttons {
   float: left;
   height: 55px;
-  background-color: #6b3bb9;
+  background-color: $very-dark-purple;
 }
 .main-post .buttons-bar .buttons a {
   width: 55px;
@@ -3948,11 +3951,11 @@ aside .widget:first-child {
   background-position: center center;
 }
 .main-post .buttons-bar .buttons a:hover {
-  background-color: #6135a8;
+  background-color: darken($very-dark-purple, 5%);
 }
 .main-post .buttons-bar .buttons .count {
   height: 55px;
-  background-color: #7541cc;
+  background-color: $dark-purple;
   float: left;
   padding: 0 40px;
   color: white;
@@ -3979,7 +3982,7 @@ aside .widget:first-child {
   transition: background-color 0.4s ease-in-out;
 }
 .main-post .buttons-bar .social-icons a:hover {
-  background-color: #703dc2;
+  background-color: darken($light-purple, 5%);
 }
 .main-post .buttons-bar .social-icons a.facebook {
   background-position: 0px 0px;
@@ -4007,7 +4010,7 @@ aside .widget:first-child {
   background-position: bottom center;
 }
 .main-post .buttons-bar .close-button:hover {
-  background-color: #703dc2;
+  background-color: darken($light-purple, 5%);
 }
 .widget {
   width: 100%;
@@ -4231,7 +4234,7 @@ aside .widget:first-child {
   right: 0;
   bottom: 0;
   font-size: 16px;
-  background-color: #7f46dd;
+  background-color: $light-purple;
   padding: 3px 10px;
   color: white;
 }
@@ -4444,7 +4447,7 @@ footer .footer-widget p {
   font-weight: bold;
   font-family: Dosis, Arial, sans-serif;
   line-height: 12px;
-  background-color: #7541cc;
+  background-color: $dark-purple;
   text-transform: uppercase;
   z-index: 3;
 }
@@ -4525,7 +4528,7 @@ footer .footer-widget p {
   font-weight: bold;
 }
 .tooltip.bottom .tooltip-arrow {
-  border-bottom-color: #7f46dd;
+  border-bottom-color: $light-purple;
 }
 .tooltip.in {
   -webkit-opacity: 1;
@@ -4533,7 +4536,7 @@ footer .footer-widget p {
   opacity: 1;
 }
 .tooltip-inner {
-  background-color: #7f46dd;
+  background-color: $light-purple;
   padding: 7px 20px;
 }
 .profile-wrap {
@@ -4912,7 +4915,7 @@ footer .footer-widget p {
   margin-bottom: 0;
 }
 .custom-checkbox.custom-checkbox-vertical label {
-  color: #7f46dd;
+  color: $light-purple;
   padding-left: 0;
   padding-bottom: 15px;
   line-height: 20px;
@@ -4936,7 +4939,7 @@ footer .footer-widget p {
   transition: all 0.4s ease-in-out;
 }
 .custom-checkbox.custom-checkbox-vertical input[type=checkbox]:checked + label {
-  color: #7f46dd;
+  color: $light-purple;
 }
 .custom-checkbox.custom-checkbox-vertical input[type=checkbox]:checked + label:before {
   content: "";
@@ -4980,7 +4983,7 @@ footer .footer-widget p {
   display: none;
 }
 .custom-checkbox input[type=checkbox]:checked + label {
-  color: #7f46dd;
+  color: $light-purple;
 }
 .custom-checkbox input[type=checkbox]:checked + label:before {
   content: "";
@@ -5123,13 +5126,13 @@ footer .footer-widget p {
   color: white;
   font-size: 14px;
   font-family: Dosis, Arial, sans-serif;
-  background-color: #7f46dd;
+  background-color: $light-purple;
   text-transform: uppercase;
   font-weight: bold;
   text-decoration: none;
 }
 .modal-body .modal-bottom-menu .half .btn-link.alternate-btn {
-  background-color: #7541cc;
+  background-color: $dark-purple;
 }
 .modal-body .post-window {
   width: 100%;
@@ -5191,8 +5194,8 @@ footer .footer-widget p {
   color: white;
 }
 .modal-body .post-window .window-left .form-control:focus {
-  border-color: #7f46dd;
-  color: #7f46dd;
+  border-color: $light-purple;
+  color: $light-purple;
 }
 .modal-body .post-window .window-left textarea {
   padding: 20px;
@@ -5219,7 +5222,7 @@ footer .footer-widget p {
   display: inline-block;
 }
 .modal-body .post-window .window-left .upload-wrap .fileinput-button .purple {
-  color: #7f46dd;
+  color: $light-purple;
   font-weight: bold;
 }
 .modal-body .post-window .window-left .upload-wrap .files {
@@ -5468,12 +5471,12 @@ body.modal-open header .navbar {
 .modal-top-menu {
   width: 100%;
   float: left;
-  background-color: #7f46dd;
+  background-color: $light-purple;
 }
 .modal-top-menu .half {
   width: 50%;
   float: left;
-  border-left: solid 1px #7541cc;
+  border-left: solid 1px $dark-purple;
   text-align: center;
 }
 .modal-top-menu .half:first-child {
@@ -5499,9 +5502,9 @@ body.modal-open header .navbar {
   content: "";
   position: absolute;
   border-right: 6px solid transparent;
-  border-top: 6px solid #7f46dd;
+  border-top: 6px solid $light-purple;
   border-left: 6px solid transparent;
-  border-top-color: #7f46dd;
+  border-top-color: $light-purple;
 }
 .article-infos {
   width: 100%;
@@ -5971,7 +5974,7 @@ body.modal-open header .navbar {
   margin-top: -30px;
   margin-left: -30px;
   position: absolute;
-  background-color: #7f46dd;
+  background-color: $light-purple;
   text-align: center;
   color: white;
   -webkit-transition: all .4s ease-in-out;
@@ -5992,7 +5995,7 @@ body.modal-open header .navbar {
 }
 .videos-widget .article.big-article figure .play-button .button-text {
   color: white;
-  background-color: #7541cc;
+  background-color: $dark-purple;
   font-family: Dosis, Arial, sans-serif;
   font-size: 10px;
   font-weight: bold;
@@ -6045,7 +6048,7 @@ body.modal-open header .navbar {
   margin-top: -15px;
   margin-left: -15px;
   position: absolute;
-  background-color: #7f46dd;
+  background-color: $light-purple;
   text-align: center;
   color: white;
   -webkit-transition: all .4s ease-in-out;
@@ -6066,7 +6069,7 @@ body.modal-open header .navbar {
 }
 .videos-widget .article.small-article figure .play-button .button-text {
   color: white;
-  background-color: #7541cc;
+  background-color: $dark-purple;
   font-family: Dosis, Arial, sans-serif;
   font-size: 8px;
   font-weight: bold;
@@ -6259,11 +6262,11 @@ body.modal-open header .navbar {
   color: #767676;
 }
 .sidebar-menu .side-article h2 a:hover {
-  color: #7F46DD;
+  color: $light-purple;
   text-decoration: none;
 }
 .main-post h1 a:hover {
-  color: #7F46DD;
+  color: $light-purple;
 }
 .sidebar-menu .side-article .counters-line {
   width: 100%;
@@ -6494,7 +6497,7 @@ header .right-container .social-share .drop-down {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #7f46dd;
+  background-color: $light-purple;
   list-style: none;
   width: 100%;
   float: left;
@@ -6525,7 +6528,7 @@ header .right-container .social-share .drop-down a {
   background-repeat: no-repeat;
 }
 header .right-container .social-share .drop-down li:hover {
-  background-color: #7541cc;
+  background-color: $dark-purple;
 }
 header .right-container .social-share .drop-down .twitter {
   background-image: image-url("twitter_white.png");
@@ -6639,7 +6642,7 @@ header .right-container .social-share .share {
 
 header .navbar-nav > li:hover > a {
   color: white;
-  background: #7541cc;
+  background: $dark-purple;
   padding: 30px 25px 30px;
 }
 header .navbar-nav > li:hover > .dropdown-menu {
@@ -6957,7 +6960,7 @@ header .navbar-nav > li:hover > .dropdown-menu {
     background: transparent;
   }
   header .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
-    background: #7541cc;
+    background: $dark-purple;
     color: white;
   }
   header .navbar-nav > li > .dropdown-menu li {
@@ -6968,7 +6971,7 @@ header .navbar-nav > li:hover > .dropdown-menu {
     border-top: none;
   }
   header .navbar-nav > li > .dropdown-menu li:hover > a {
-    background: #7541cc;
+    background: $dark-purple;
     color: white;
   }
   header .navbar-nav > li > .dropdown-menu li.has-dropdown > a {
@@ -7031,11 +7034,11 @@ header .navbar-nav > li:hover > .dropdown-menu {
     width: 100%;
   }
   header .navbar-nav > li > .dropdown-menu li > ul > li > a:hover {
-    background: #7541cc;
+    background: $dark-purple;
     color: white;
   }
   header .navbar-nav > li > .dropdown-menu li > ul > li > a:focus {
-    background: #7541cc;
+    background: $dark-purple;
     color: white;
   }
   header .navbar-default .navbar-nav > .active > a,
