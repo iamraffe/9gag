@@ -50,8 +50,8 @@
                                 <span>Login to post &amp; more</span>
                             </div>
                             <div class="buttons-line">
-                                <%= link_to "Login", '#loginModal', class: "btn btn-primary btn-block custom-button" %>
-                                <%= link_to "Register", '#registerModal', class: "btn btn-primary btn-block custom-button" %>
+                                <%= link_to "Login", '#loginModal', class: "btn btn-primary btn-block custom-button", :data => {:toggle=>"modal"} %>
+                                <%= link_to "Register", '#registerModal', class: "btn btn-primary btn-block custom-button", :data => {:toggle=>"modal"} %>
                             </div>
                         </div>
                         <% end %>
