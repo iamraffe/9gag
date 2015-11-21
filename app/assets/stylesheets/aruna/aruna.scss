@@ -110,9 +110,9 @@ hr {
 .left-aside {
   float: left;
 }
-.right-content {
-  float: right;
-}
+// .right-content {
+//   float: right;
+// }
 header {
   @include set-default;
   position: fixed;
