@@ -20,17 +20,17 @@
                         <li class=""><a href="/">Mandoca</a></li>
                     </ul>
                     <!-- <div > -->
-                    <ul class="navbar-nav nav navbar-right ">
+                    <ul class="nav navbar-nav navbar-right ">
                         <div class="user-box <%= 'loggedout' unless logged_in? %>">
                             <% if logged_in? %>
                                 <li></li>
                             <% else %>
                                 <li class="dropdown">
                                     <%= link_to login_path, class: "dropdown-toggle", :data => {:toggle=>"dropdown"} do %>
-                                        <span class="name"><i class="glyphicon glyphicon-plus"></i> LOGIN</span>
+                                        <span class="name">Login</span>
                                     <% end %>
                                     <ul class="dropdown-menu drop-down">
-                                        <li class="counters-line">
+                                        <li class="counters-line hidden-xs text-center">
                                             <span>Login to post &amp; more</span>
                                         </li>
                                         <li class="buttons-line">

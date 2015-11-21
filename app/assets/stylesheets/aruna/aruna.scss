@@ -135,16 +135,19 @@ header {
         margin-left: 0 !important;
       }
     }
-    float: right;
-    height: $header-height;
-    background-color: $purple;
+    // float: right;
+    // height: $header-height;
+    // background-color: $purple;
     .user-box {
-      width: 160px;
-      height: $header-height;
-      background-color: $purple;
-      float: left;
-      text-align: center;
-      position: relative;
+      @media(min-width: 768px){
+        width: 160px;
+        height: $header-height;
+        background-color: $purple;
+        float: left;
+        text-align: center;
+        position: relative;
+      }
+
 
       .open a.dropdown-toggle{
         background: transparent;
@@ -179,69 +182,74 @@ header {
         color: white;
         display: block;
         color: white;
-        padding: 30px 25px;
+        padding: 15px 20px;
         @include font-Dosis;
         font-size: 14px;
         font-weight: bold;
         text-transform: uppercase;
-      }
-      .drop-down {
-        position: absolute;
-        top: 100%;
-        right: 0px;
-        background-color: white;
-        border: solid 1px #f0f0f0;
-        width: 250px;
-        -webkit-opacity: 1;
-        -moz-opacity: 1;
-        opacity: 1;
-        height: auto;
-        overflow: hidden;
-        -webkit-transition: opacity 0.4s ease-in-out;
-        -moz-transition: opacity 0.4s ease-in-out;
-        -o-transition: opacity 0.4s ease-in-out;
-        -ms-transition: opacity 0.4s ease-in-out;
-        transition: opacity 0.4s ease-in-out;
-        .counters-line {
-          @include set-default;
-          border-bottom: solid 1px #f0f0f0;
-          .half {
-            float: left;
-            width: 50%;
-            padding: 15px 0;
-            .counter {
-              @include font-Dosis;
-              font-size: 24px;
-              font-weight: bold;
-              color: #909090;
-              text-align: center;
-              display: block;
-              line-height: 24px;
-            }
-            .desc {
-              @include font-Dosis;
-              font-size: 12px;
-              font-weight: bold;
-              color: #c5c5c5;
-              text-align: center;
-              display: block;
-              line-height: 12px;
-              text-transform: uppercase;
-            }
-            &:first-child {
-              border-right: solid 1px #f0f0f0;
-            }
-          }
+        @media(min-width: 768px){
+          padding: 30px 25px;
         }
-        .buttons-line {
-          .custom-button {
-            margin-top: 10px;
-            &:first-child {
-              margin-top: 5px;
+      }
+      @media(min-width: 768px){
+        .drop-down {
+          position: absolute;
+          top: 100%;
+          right: 0px;
+          background-color: white;
+          border: solid 1px #f0f0f0;
+          width: 250px;
+          -webkit-opacity: 1;
+          -moz-opacity: 1;
+          opacity: 1;
+          height: auto;
+          overflow: hidden;
+          -webkit-transition: opacity 0.4s ease-in-out;
+          -moz-transition: opacity 0.4s ease-in-out;
+          -o-transition: opacity 0.4s ease-in-out;
+          -ms-transition: opacity 0.4s ease-in-out;
+          transition: opacity 0.4s ease-in-out;
+          .counters-line {
+            @include set-default;
+            border-bottom: solid 1px #f0f0f0;
+            .half {
+              float: left;
+              width: 50%;
+              padding: 15px 0;
+              .counter {
+                @include font-Dosis;
+                font-size: 24px;
+                font-weight: bold;
+                color: #909090;
+                text-align: center;
+                display: block;
+                line-height: 24px;
+              }
+              .desc {
+                @include font-Dosis;
+                font-size: 12px;
+                font-weight: bold;
+                color: #c5c5c5;
+                text-align: center;
+                display: block;
+                line-height: 12px;
+                text-transform: uppercase;
+              }
+              &:first-child {
+                border-right: solid 1px #f0f0f0;
+              }
             }
           }
-          padding: 20px;
-            @include set-default;
+          .buttons-line {
+            .custom-button {
+              margin-top: 10px;
+              &:first-child {
+                margin-top: 5px;
+              }
+            }
+            padding: 20px;
+              @include set-default;
+          }
         }
       }
     }
