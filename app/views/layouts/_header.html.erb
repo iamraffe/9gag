@@ -19,8 +19,41 @@
                         <li class=""><a href="/">Popular</a></li>
                         <li class=""><a href="/">Mandoca</a></li>
                     </ul>
-                    <div class="navbar-nav nav navbar-right">
-                        <div class="user-box loggedout">
+                    <!-- <div > -->
+                    <ul class="navbar-nav nav navbar-right ">
+                        <div class="user-box <%= 'loggedout' unless logged_in? %>">
+                            <% if logged_in? %>
+                                <li></li>
+                            <% else %>
+                                <li class="dropdown">
+                                    <%= link_to login_path, class: "dropdown-toggle", :data => {:toggle=>"dropdown"} do %>
+                                        <span class="name"><i class="glyphicon glyphicon-plus"></i> LOGIN</span>
+                                    <% end %>
+                                    <ul class="dropdown-menu drop-down">
+                                        <li class="counters-line">
+                                            <span>Login to post &amp; more</span>
+                                        </li>
+                                        <li class="buttons-line">
+                                            <ul class="list-unstyled">
+                                                <li><%= link_to "Login", '#loginModal', class: "btn btn-primary btn-block custom-button", :data => {:toggle=>"modal"} %></li>
+                                                <li><%= link_to "Register", '#registerModal', class: "btn btn-primary btn-block custom-button", :data => {:toggle=>"modal"} %></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <!-- <div class="drop-down">
+                                        <div class="counters-line">
+                                            <span>Login to post &amp; more</span>
+                                        </div>
+                                        <div class="buttons-line">
+                                            <%= link_to "Login", '#loginModal', class: "btn btn-primary btn-block custom-button", :data => {:toggle=>"modal"} %>
+                                            <%= link_to "Register", '#registerModal', class: "btn btn-primary btn-block custom-button", :data => {:toggle=>"modal"} %>
+                                        </div>
+                                    </div> -->
+                                </li>
+                            <% end %>
+                        </div>
+                    </ul>
+                        <!-- <div class="user-box loggedout">
                         <% if logged_in? %>
                             <%= link_to '#' do %>
                                 <figure>
@@ -53,8 +86,8 @@
                             </div>
                         </div>
                         <% end %>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div> -->
                 </div>
             </nav>
         </div>
