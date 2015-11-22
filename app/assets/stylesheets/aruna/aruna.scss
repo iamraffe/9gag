@@ -66,6 +66,8 @@ hr {
     color: white;
     text-transform: uppercase;
     padding: 13px 12px;
+    opacity: 1;
+    visibility: visible;
   }
   &.btn-info {
     background: #ebebeb;
@@ -209,6 +211,8 @@ header {
           -o-transition: opacity 0.4s ease-in-out;
           -ms-transition: opacity 0.4s ease-in-out;
           transition: opacity 0.4s ease-in-out;
+          margin-top: 0;
+          box-shadow: none;
           .counters-line {
             @include set-default;
             border-bottom: solid 1px #f0f0f0;
@@ -759,7 +763,7 @@ header {
 aside {
   .widget {
     &:first-child {
-      margin-top: 25px;
+      margin-top: 20px;
     }
   }
 }
@@ -2086,6 +2090,7 @@ footer {
   background-clip: padding-box;
   @include set-default;
 }
+
 .mCSB_container {
   margin-right: 20px;
 }
@@ -2118,7 +2123,7 @@ footer {
     width: 100%;
     background-color: white;
     &.login-window {
-      display: none;
+      // display: none;
     }
     .col-sm-7 {
       padding: 40px 40px 20px 40px;
@@ -2487,6 +2492,14 @@ footer {
     }
   }
 }
+.login_form .btn-primary {
+  display: inline !important;
+}
+#registerModal .modal-body .modal-window.login-window,
+#loginModal .modal-body .modal-window.register-window{
+  display: none;
+}
+
 .modal-footer {
   padding: 0;
   border-top: none;
@@ -2495,7 +2508,12 @@ footer {
   float: left;
   width: 100%;
   .btn-primary {
-    -webkit-border-radius: 0;-webkit-background-clip: padding-box;-moz-border-radius: 0;-moz-background-clip: padding;border-radius: 0;background-clip: padding-box;
+    -webkit-border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0;
+    -moz-background-clip: padding;
+    border-radius: 0;
+    background-clip: padding-box;
     margin: 0;
     padding-top: 25px;
     padding-bottom: 25px;
