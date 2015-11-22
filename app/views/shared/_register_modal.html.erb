@@ -116,26 +116,31 @@
                         </form>
                     </div>
                     <div class="modal-window login-window">
-                                        <form class="login_form" method="post" action="http://teothemes.com/wp/aruna/wp-login.php">
-                        <div class="half-horizontal">
-                            <div class="input-group">
-                                <span class="input-group-addon">Username:</span>
-                                <input name="log" type="text" class="form-control" placeholder="teothemes">
+                        <%= form_for(:session, url: login_path, :html => {:class => "login_form"}) do |f| %>
+                            <div class="half-horizontal">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Email:</span>
+                                    <%= f.email_field :email, class: 'form-control' %>
+                                </div>
                             </div>
-                        </div>
-                        <div class="half-horizontal">
-                            <div class="input-group">
-                                <span class="input-group-addon">Password:</span>
-                                <input name="pwd" type="password" class="form-control" placeholder="password">
+                            <div class="half-horizontal">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Password:</span>
+                                    <%= f.password_field :password, class: 'form-control' %>
+                                </div>
                             </div>
-                        </div>
+                             <div class="modal-footer">
+                                <%= f.submit "Log in", class: "btn btn-primary btn-block custom-button" %>
+                            </div>
+                        <% end %>
+<!--
                                                     <div style="text-align: center; clear: both; margin-bottom: 10px; position: relative; top: -15px;">
                                 <div class="new-fb-btn new-fb-1 new-fb-default-anim"><div class="new-fb-1-1"><div class="new-fb-1-1-1"><a href="http://teothemes.com/wp/aruna/wp-login.php?loginFacebook=1&redirect=http://teothemes.com/wp/aruna">CONNECT WITH</a></div></div></div><br />
                             </div>
                                                 <div class="modal-footer">
                             <input name="wp-submit" id="login-button" type="submit" value="LOGIN!" class="btn btn-primary btn-block custom-button" />
                         </div>
-                        <input type="hidden" name="redirect_to" value="http://teothemes.com/wp/aruna" />
+                        <input type="hidden" name="redirect_to" value="http://teothemes.com/wp/aruna" /> -->
                     </form>
                     </div>
                 </div>

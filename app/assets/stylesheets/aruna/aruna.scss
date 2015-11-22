@@ -2147,9 +2147,10 @@ footer {
     .half-horizontal {
       float: left;
       width: 50%;
-      padding: 30px 25px 5px 5px;
+      // padding: 30px 25px 5px 5px;
+      padding: 15px;
       &:first-child {
-        padding: 30px 5px 5px 25px;
+        // padding: 30px 5px 5px 25px;
       }
     }
   }
